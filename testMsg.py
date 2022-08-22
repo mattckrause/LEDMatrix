@@ -22,7 +22,8 @@ rotation = 0
 #load your font
 #font = ImageFont.truetype("LiberationMono-Regular.ttf", 8)
 #5x7.ttf font is easier to read and available for download for personal use from the Internet
-font = ImageFont.truetype("5x7.ttf", 8)
+#font = ImageFont.truetype("5x7.ttf", 8)
+font = ImageFont.load("arial.pil")
 
 #for the Adafruit NeoMatrix grid
 def getIndex(x, y):        

@@ -23,6 +23,6 @@ BLACK = 0x000000
 GREEN = 0x025900
 
 for i in range(256):
-    pixels[i] = GREEN
+    pixels[i] = BLACK
 pixels.show()
 time.sleep(2)

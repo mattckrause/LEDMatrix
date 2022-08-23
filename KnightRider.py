@@ -21,8 +21,10 @@ RED = 0xff0000
 x = 3
 y = 4
 for i in range(255):
-    while x < 255:
+    while x < 255 and y < 255:
         pixels[x] = RED
+        pixels[y] = RED
         x += 8
+        y =+ 8
 pixels.show()
 time.sleep(2)

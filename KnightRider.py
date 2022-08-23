@@ -18,7 +18,11 @@ pixels = neopixel.NeoPixel(
 
 RED = 0xff0000
 
-for i in range(0,23):
-    pixels[i] = RED
+x = 3
+y = 4
+for i in range(255):
+    while x < 255:
+        pixels[x] = RED
+        x += 8
 pixels.show()
 time.sleep(2)

@@ -6,7 +6,7 @@ import neopixel
 from colorsys import hsv_to_rgb
 from PIL import Image, ImageDraw, ImageFont
 
-text = "Welcome to Tom's Hardware."
+text = "Please Work"
 pixel_pin = board.D18
 num_pixels = 256
 display_width = 32
@@ -22,8 +22,8 @@ rotation = 0
 #load your font
 #font = ImageFont.truetype("LiberationMono-Regular.ttf", 8)
 #5x7.ttf font is easier to read and available for download for personal use from the Internet
-#font = ImageFont.truetype("5x7.ttf", 8)
-font = ImageFont.load("arial.pil")
+font = ImageFont.truetype("/usr/share/fonts/truetype/5x7.ttf", 8)
+
 
 #for the Adafruit NeoMatrix grid
 def getIndex(x, y):        

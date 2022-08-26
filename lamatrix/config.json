@@ -15,8 +15,5 @@
   "Clock": {
     "intensity": 0.05,
     "debug": true
-  },
-  "Demo": {
-    "intensity":0.05
   }
 }

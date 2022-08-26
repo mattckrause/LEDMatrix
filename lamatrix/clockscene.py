@@ -95,7 +95,7 @@ class ClockScene:
 		lower_intensity = intensity // 3
 		for i in range(7):
 			color = intensity if i == weekday else lower_intensity
-			b = (color << 1) // 7
+			b = (color << 5) // 7 #changed from 1
 			display.put_pixel(x_off, 7, color, color, b)
 			if self.columns == 32:
 				display.put_pixel(x_off+1, 7, color, color, b)

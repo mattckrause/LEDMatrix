@@ -5,6 +5,7 @@
 # the current time while the host computer is offline.
 #
 import time
+from datetime import datetime
 if not hasattr(time, 'ticks_ms'):
 	# Emulate https://docs.pycom.io/firmwareapi/micropython/utime.html
 	time.ticks_ms = lambda: int(time.time() * 1000)
@@ -57,9 +58,16 @@ class ClockScene:
 		# Automatically switch to showing the date for a few secs
 		tmp = fps << 6
 		tmp = ((fps << 4) + frame) % tmp
-
 		y_off = 1
-		(year, month, day, hour, minute, second, weekday, _) = time.localtime()[:8]
+		now = datetime.now()
+		year = now.year
+		month = now.month
+		day = now.day
+		hour = now.strftime('%I')
+		minute = now.minute
+		second = now.second
+		(yearx, monthx, dayx, hourx, minutex, second, weekday, _) = time.localtime()[:8]
+
 		if not self.button_state and tmp > (fps<<2):
 			if self.date_was_shown:
 				display.clear()
@@ -76,7 +84,7 @@ class ClockScene:
 				display.render_text(PixelFont, text, 4, y_off+8, intensity)
 		else:
 			if self.columns == 32:
-				text = '{:02d}.{:02d}.{:02d}'.format(day, month, year % 100)
+				text = '{:02d}.{:02d}.{:02d}'.format(month, day, year % 100)
 				display.render_text(PixelFont, text, 2, y_off, intensity)
 			else:
 				text = '{:02d}{:02d}'.format(day, month)

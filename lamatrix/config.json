@@ -1,15 +1,4 @@
 {
-  "networks": [
-    {
-      "ssid":"yourWiFiSSID",
-      "password":"yourWiFiPassword"
-    },
-    {
-      "ssid":"otherWiFiSSID",
-      "password":"otherWiFiPassword"
-    }
-  ],
-  "port": "/dev/ttyACM0",
   "baudrate": 115200,
   "remapConsole": false,
   "sceneTimeout": 40,

@@ -148,11 +148,11 @@ if __name__ == '__main__':
 		r.add_scene(scene)
 		gc.collect()
 
-	#if 'Weather' in config:
-	#	from weatherscene import WeatherScene
-	#	scene = WeatherScene(display, config['Weather'])
-	#	r.add_scene(scene)
-	#	gc.collect()
+	if 'Weather' in config:
+		from weatherscene import WeatherScene
+		scene = WeatherScene(display, config['Weather'])
+		r.add_scene(scene)
+		gc.collect()
 
 	if 'Fire' in config:
 		from firescene import FireScene

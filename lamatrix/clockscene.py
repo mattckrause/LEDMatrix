@@ -60,27 +60,24 @@ class ClockScene:
 		tmp = ((fps << 4) + frame) % tmp
 		y_off = 1
 		now = datetime.now()
-		year = now.year
-		month = now.month
-		day = now.day
 		hour = now.strftime('%I')
 		minute = now.minute
 		second = now.second
-		(yearx, monthx, dayx, hourx, minutex, second, weekday, _) = time.localtime()[:8]
+		(year, month, day, hourx, minutex, second, weekday, _) = time.localtime()[:8]
 
 		if not self.button_state and tmp > (fps<<2):
 			if self.date_was_shown:
 				display.clear()
 				self.date_was_shown = False
 			if self.columns == 32:
-				text = '  {:02d}:{:02d}  '.format(hour, minute)
+				text = '  {}:{}  '.format(hour, minute)
 				if (int(time.ticks_ms() // 100.0) % 10) < 4:
 					text = text.replace(':', ' ')
 				display.render_text(PixelFont, text, 2, y_off, intensity)
 			else:
-				text = '{:02d}'.format(hour)
+				text = '{}'.format(hour)
 				display.render_text(PixelFont, text, 4, y_off, intensity)
-				text = '{:02d}'.format(minute)
+				text = '{}'.format(minute)
 				display.render_text(PixelFont, text, 4, y_off+8, intensity)
 		else:
 			if self.columns == 32:

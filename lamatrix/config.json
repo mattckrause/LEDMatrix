@@ -16,7 +16,7 @@
     "intensity": 0.05,
     "debug": true
   },
-  "Fire": {
-    "intensity": 0.05
+  "Demo": {
+    "intensity":0.05
   }
 }

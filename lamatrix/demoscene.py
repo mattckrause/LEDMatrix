@@ -12,7 +12,7 @@ class DemoScene:
 		self.display = display
 		self.intensity = 32
 		self.x_pos = 0
-		self.text = 'example'
+		self.text = 'Test Message'
 		if not config:
 			return
 		if 'intensity' in config:

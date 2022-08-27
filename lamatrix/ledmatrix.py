@@ -19,7 +19,7 @@ class LedMatrix:
 		self.debug = False
 		self.stride = 8
 		self.columns = 32
-		self.rotation = 0
+		self.rotation = 180
 		self.fps = 10
 		self.fix_r = 0xff
 		self.fix_g = 0xff

@@ -12,12 +12,12 @@ num_pixels = 256
 display_width = 32
 display_height = 8
 matrixbrightness = 0.2
-scrollSpeed = 0.12 #adjust the scrolling speed here-> smaller number=faster scroll
+scrollSpeed = 0.08 #adjust the scrolling speed here-> smaller number=faster scroll
 TextColor = (255,255,255) #set the color of your text here in RGB, default is white
 
 ORDER = neopixel.GRB
 pixels = neopixel.NeoPixel(pixel_pin, num_pixels, brightness=matrixbrightness, auto_write=False, pixel_order=ORDER)
-rotation = 180 #change from 0
+rotation = 0
 
 #load your font
 #font = ImageFont.truetype("LiberationMono-Regular.ttf", 8)

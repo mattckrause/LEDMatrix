@@ -22,7 +22,8 @@ rotation = 0
 #load your font
 #font = ImageFont.truetype("LiberationMono-Regular.ttf", 8)
 #5x7.ttf font is easier to read and available for download for personal use from the Internet
-font = ImageFont.truetype("/usr/share/fonts/truetype/5x7-practical-regular.ttf", 8)
+#font = ImageFont.truetype("/usr/share/fonts/truetype/5x7-practical-regular.ttf", 8)
+font = ImageFont.load_default()
 
 
 #for the Adafruit NeoMatrix grid

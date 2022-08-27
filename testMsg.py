@@ -17,7 +17,7 @@ TextColor = (255,255,255) #set the color of your text here in RGB, default is wh
 
 ORDER = neopixel.GRB
 pixels = neopixel.NeoPixel(pixel_pin, num_pixels, brightness=matrixbrightness, auto_write=False, pixel_order=ORDER)
-rotation = 0
+rotation = 180 #change from 0
 
 #load your font
 #font = ImageFont.truetype("LiberationMono-Regular.ttf", 8)
